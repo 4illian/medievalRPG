@@ -1,0 +1,56 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.ctn {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: url("../images/city_night.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
+.dialog {
+    position: absolute;
+    bottom: 20px;
+    width: 60%;
+    margin-left: 20%;
+    height: 200px;
+    background-image: url("../images/dialog_clean.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    color: white;
+    z-index: 10;
+}
+
+.dialog_name {
+    margin-left: 18.5%;
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    text-transform: uppercase;
+}
+
+.dialog_content {
+    width: 80%;
+    height: 90px;
+    margin-left: 10%;
+    margin-top: 20px;
+    color: black;
+}
+
+.player {
+    background-image: url("../images/dwarf.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    bottom: -120px;
+    left: 200px;
+
+}
