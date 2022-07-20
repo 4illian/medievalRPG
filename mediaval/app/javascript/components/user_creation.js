@@ -50,7 +50,6 @@ const UserCreation = () => {
                 <div className={"ctn_select_player"}>
                     <div className={"ctn_select_player_dwarf"}>
                         <div className={"player player_ninja"}
-
                         />
                     </div>
 
