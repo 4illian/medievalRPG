@@ -1,4 +1,4 @@
-/* html, body {margin: 0; height: 100%; overflow: hidden} */
+html, body {margin: 0; height: 100%; overflow: hidden}
 
 .ctn {
     width: 100vw;
@@ -43,7 +43,7 @@
     color: black;
 }
 
-.player {
+.player_game_start {
     background-image: url("../images/dwarf.png");
     background-repeat: no-repeat;
     background-size: contain;

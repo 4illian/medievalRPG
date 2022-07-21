@@ -8,9 +8,10 @@ const GameStart = () => {
     <div className={"ctn"}>
       <Dialog name={"Raoul"} content={"yoooo je suis raoul le caoul"} />
 
-      <div className={"player"} />
+      <div className={"player_game_start"} />
     </div>
   );
+
 };
 
 export default GameStart;
