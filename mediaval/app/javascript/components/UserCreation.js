@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import "../../assets/stylesheets/user_creation.css";
 import Dwarf from "../../assets/images/dwarf.png";
-import UserCreationStatistique from "./user_creation_statistiques";
+import UserCreationStatistique from "./UserCreationStatistiques";
 import instance from "./instance";
 const UserCreation = ({ token, user }) => {
-  const createPlayer = (player) => {
+  function createPlayer(player) {
     console.log("test");
     instance(token).post("/user_creation", {
       name: "testaxios",
@@ -12,7 +12,7 @@ const UserCreation = ({ token, user }) => {
       classe_id: 1,
       artefact_id: 1,
     });
-  };
+  }
 
   const updatePlayer = (player) => {
     instance(token).put(`/user_creation/${player.id}`, {
@@ -26,7 +26,12 @@ const UserCreation = ({ token, user }) => {
   return (
     <div className={"ctn"}>
       <div className={"ctn_select"}>
-        <div className={"ctn_select_player"} onClick={() => createPlayer}>
+        <div
+          className={"ctn_select_player"}
+          onClick={(e) => {
+            createPlayer();
+          }}
+        >
           <div className={"ctn_select_player_dwarf"}>
             <div className={"player player_magician"} />
           </div>
@@ -65,7 +70,6 @@ const UserCreation = ({ token, user }) => {
             />
           </div>
         </div>
-
         <div className={"ctn_select_player"}>
           <div className={"ctn_select_player_dwarf"}>
             <div className={"player player_ninja"} />
@@ -85,7 +89,6 @@ const UserCreation = ({ token, user }) => {
             />
           </div>
         </div>
-
         <div className={"ctn_select_player"}>
           <div className={"ctn_select_player_dwarf"}>
             <div className={"player player_zob"} />
