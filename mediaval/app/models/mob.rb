@@ -1,3 +1,4 @@
 class Mob < ApplicationRecord
-    belongs_to :capacity
+    has_many :mobs_capacities
+    has_many :capacities, through: :mobs_capacities
 end
