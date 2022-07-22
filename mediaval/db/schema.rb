@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_21_140639) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_22_113902) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -77,8 +77,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_21_140639) do
     t.datetime "updated_at", null: false
     t.string "environment"
     t.integer "boss"
+  end
+
+  create_table "mobs_capacities", force: :cascade do |t|
+    t.bigint "mob_id"
     t.bigint "capacity_id"
-    t.index ["capacity_id"], name: "index_mobs_on_capacity_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["capacity_id"], name: "index_mobs_capacities_on_capacity_id"
+    t.index ["mob_id"], name: "index_mobs_capacities_on_mob_id"
   end
 
   create_table "npcs", force: :cascade do |t|
