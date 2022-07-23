@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # get "user_creation", to: "user_creation#index"
   get "game_start", to: "game_start#index"
   resources :user_creation
+  resources :game_start
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
