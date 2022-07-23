@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  root to: 'user_creation#index'
+
+
   resources :games
   devise_for :users
   # get "user_creation", to: "user_creation#index"
