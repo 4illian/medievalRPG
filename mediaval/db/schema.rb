@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_22_113902) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_22_124259) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,8 +67,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_113902) do
     t.bigint "npc_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "step"
     t.index ["npc_id"], name: "index_dialogs_on_npc_id"
     t.index ["quete_id"], name: "index_dialogs_on_quete_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "buff"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "mobs", force: :cascade do |t|

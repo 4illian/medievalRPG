@@ -44,7 +44,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
 .player_game_start {
-    background-image: url("../images/dwarf.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 500px;
@@ -52,5 +51,17 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     position: absolute;
     bottom: -120px;
     left: 200px;
+}
 
+.player_ninja { 
+    background-image: url("../images/ninja.png");
+}
+.player_guerrier { 
+    background-image: url("../images/dwarf.png");
+}
+.player_magicien { 
+    background-image: url("../images/magician.png");
+}
+.player_zob { 
+    background-image: url("../images/zob.png");
 }

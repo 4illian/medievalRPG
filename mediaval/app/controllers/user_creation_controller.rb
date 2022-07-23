@@ -4,6 +4,7 @@ class UserCreationController < ApplicationController
     def index
         form_authenticity_token
         current_user
+        @classe = Classe.all
     end
 
     def show
