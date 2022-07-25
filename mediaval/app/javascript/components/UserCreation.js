@@ -57,7 +57,7 @@ const UserCreation = ({ token, user, classe }) => {
             {/*</p>*/}
             <UserCreationStatistique
               strength={4}
-              vitality={5}
+              vitality={110}
               dex={7}
               resistance={4}
               intel={10}
@@ -86,7 +86,7 @@ const UserCreation = ({ token, user, classe }) => {
             {/*</p>*/}
             <UserCreationStatistique
               strength={10}
-              vitality={7}
+              vitality={140}
               dex={3}
               resistance={8}
               intel={2}
@@ -113,7 +113,7 @@ const UserCreation = ({ token, user, classe }) => {
             {/*</p>*/}
             <UserCreationStatistique
               strength={7}
-              vitality={5}
+              vitality={100}
               dex={10}
               resistance={5}
               intel={3}
@@ -140,7 +140,7 @@ const UserCreation = ({ token, user, classe }) => {
             {/*</p>*/}
             <UserCreationStatistique
               strength={4}
-              vitality={4}
+              vitality={95}
               dex={4}
               resistance={4}
               intel={4}
