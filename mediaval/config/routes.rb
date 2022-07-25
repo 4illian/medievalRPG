@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "game_start", to: "game_start#index"
   resources :user_creation
   resources :game_start
+  resources :combat
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
