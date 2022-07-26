@@ -427,10 +427,7 @@ function Combat() {
 
     return (
         <div className={"ctn"}>
-
-
             <DialogCombat capacities={"yoooo je suis raoul le caoul"} />
-
             {/*<div className={"player_game_start"} />*/}
         </div>
     );
