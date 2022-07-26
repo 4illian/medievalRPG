@@ -6,12 +6,15 @@ const useStore = create(
     persist(
       (set, get) => ({
         current_player: null,
+        dialogs: null,
         setCurrentPlayer: (player) =>
           set(
             (state) => (state.current_player = player),
             false,
             "setCurrentPlayer"
           ),
+        setDialogs: (dialogs) =>
+          set((state) => (state.dialogs = dialogs), false, "setDialogs"),
       }),
       {
         name: "food-storage", // unique name

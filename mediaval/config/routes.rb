@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :game_start
   resources :combat
   resources :mob
+  resources :dialog
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

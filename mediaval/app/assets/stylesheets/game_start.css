@@ -5,9 +5,20 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     height: 100vh;
     padding: 0;
     margin: 0;
-    background-image: url("../images/city_night.jpg");
     background-position: center;
     background-size: contain;
+}
+.city{
+    background-image: url("../images/city_night.jpg");
+
+}
+.forest {
+    background-image: url("../images/combat_cave.jpg");
+
+}
+.caverne{
+    background-image: url("../images/combat_cave.jpg");
+
 }
 
 .dialog {
@@ -64,4 +75,27 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 .player_zob { 
     background-image: url("../images/zob.png");
+}
+
+.choice_quete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+
+
+.nex_button {
+    width: 100px;
+    height: 50px;
+    background-color: #1e1f1c;
+    border-radius: 10px;
+    border: 1px solid #11c930;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 600px;
+    cursor: pointer;
 }
