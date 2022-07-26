@@ -8,7 +8,10 @@ class UserCreationController < ApplicationController
     end
 
     def show
-        render json: @player
+        player_render = []
+        player_render.push(@player)
+        player_render.push(@player.class.capacities)
+        render json: player_render
     end
 
     def create
