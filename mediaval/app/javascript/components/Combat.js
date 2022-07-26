@@ -1,4 +1,5 @@
 import React from "react";
+import DialogCombat from "./DialogCombat";
 
 
 function Combat() {
@@ -39,6 +40,8 @@ function Combat() {
         "buff": [],
     }
 
+    let playerCooldown = 0
+    let ennemyCooldown = 0
 
     function TurnBasedCheck() {
         if (currentPlayerTurn === 0) PlayerDisplayInterface()
@@ -177,6 +180,8 @@ function Combat() {
             currentEnnemyBuff.buff.push(json)
         }
 
+        if(currentAttack.cooldown > 0)
+            ennemyCooldown = currentAttack.cooldown
         CombatEndCheck()
     }
 
@@ -187,6 +192,13 @@ function Combat() {
     }
 
     function PlayerDisplayInterface() {
+
+        if(playerCooldown > 0) {
+            PrintCooldownMessage(player)
+            playerCooldown--
+            currentPlayerTurn++
+        }
+
         // display capacity && inventory
 
 
@@ -197,8 +209,16 @@ function Combat() {
         PrintPlayerTurnText()
     }
 
+    function PrintCooldownMessage(concernUser) {
+
+    }
 
     function IATurnProcess() {
+        if(ennemyCooldown > 0) {
+            PrintCooldownMessage(ennemy)
+            ennemyCooldown--
+            currentPlayerTurn--
+        }
 
         PrintEnnemyTurnText()
 
@@ -406,9 +426,10 @@ function Combat() {
     TurnBasedCheck()
 
     return (
-        <div>
-            dedes
-            {/*<Dialog name={"Raoul"} content={"yoooo je suis raoul le caoul"} />*/}
+        <div className={"ctn"}>
+
+
+            <DialogCombat capacities={"yoooo je suis raoul le caoul"} />
 
             {/*<div className={"player_game_start"} />*/}
         </div>
