@@ -21,7 +21,11 @@ const UserCreation = ({ token, user, classe }) => {
         classe_id: player.classe_id,
       })
       .then((res) => {
-        setCurrentPlayer(res.data);
+        instance(token)
+          .get("/user_creation/" + res.data.id)
+          .then((res) => {
+            setCurrentPlayer(res.data);
+          });
       });
 
     // window.location.replace("http://127.0.0.1:3000/game_start");
