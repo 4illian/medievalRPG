@@ -43,15 +43,29 @@
     cursor: pointer;
 }
 .dialog_combat_capacity_logo_ctn {
-    background-image: url("../../assets/images/strength.png");
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 70%;
     height: 70%;
     margin-top: 12%;
     margin-left: 15%;
     border-radius: 5px;
     cursor: pointer;
+}
+.dialog_combat_strength {
+    background-image: url("../../assets/images/dex.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dialog_combat_protection {
+    background-image: url("../../assets/images/resistance.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dialog_combat_buff {
+    background-image: url("../../assets/images/strength.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .ctn {

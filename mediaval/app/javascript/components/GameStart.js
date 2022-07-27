@@ -4,6 +4,7 @@ import "../../assets/stylesheets/game_start.css";
 import Dialog from "./dialog";
 import useStore from "../components/store";
 import instance from "./instance";
+import Combat from "./Combat";
 const GameStart = ({ token }) => {
   const current_player = useStore((state) => state.current_player);
   const [dialogs, setDialogs] = useState(null);
@@ -45,8 +46,18 @@ const GameStart = ({ token }) => {
           <button onClick={() => setCurrentEnvironment("caverne")}>
             cavern
           </button>
+
+          <button onClick={() => setCurrentEnvironment("combat")}>
+            combat
+          </button>
         </div>
       )}
+      {
+        gameMode === "combat" ?
+            <Combat />
+            :
+            <></>
+      }
 
       <div className={checkPlayerImage(current_player)} />
     </div>

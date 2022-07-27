@@ -1,8 +1,39 @@
-import React from "react";
+import React, {useState} from "react";
 import DialogCombat from "./DialogCombat";
+import instance from "./instance";
+import useStore from "./store";
 
 
 function Combat() {
+
+
+    const current_player = useStore((state) => state.current_player);
+    const [player, setPlayer] = useState(current_player)
+
+    const [ennemy, setEnnemy] = useState({})
+
+    // const getPlayer = async () => {
+    //     await instance(token)
+    //         .get(`/user_creation/${current_player.id}`)
+    //         .then((res) => {
+    //             setPlayer(res.data);
+    //         });
+    //
+    //     window.location.replace("http://127.0.0.1:3000/game_start");
+    // };
+
+
+    // const getEnnemy = async () => {
+    //     await instance(token)
+    //         .get(`/mob/1`)
+    //         .then((res) => {
+    //             setEnnemy(res.data);
+    //         });
+    //
+    //    // window.location.replace("http://127.0.0.1:3000/game_start");
+    // };
+    //
+    // getEnnemy()
 
     // player = 0
     // IA = 1
@@ -10,17 +41,17 @@ function Combat() {
     let countTurnPlayed = 0
     let isBoss = false
 
-    let player = {
-        "life": 0,
-        "attack": 0,
-        "defense": 0
-    } // get store player statistics
+    // let player = {
+    //     "life": 0,
+    //     "attack": 0,
+    //     "defense": 0
+    // } // get store player statistics
 
-    let ennemy = {
-        "life": 0,
-        "attack": 0,
-        "defense": 0
-    } // get enemy statistics
+    // let ennemy = {
+    //     "life": 0,
+    //     "attack": 0,
+    //     "defense": 0
+    // } // get enemy statistics
 
     let currentAttack = {
         "damage": 0,

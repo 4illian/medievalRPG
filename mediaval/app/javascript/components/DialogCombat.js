@@ -15,8 +15,7 @@ function DialogCombat (props, capacities) {
 
                 <div className={"dialog_combat_ctn"}>
                     <div className={"dialog_combat_capacity_ctn"}>
-                        <div className={"dialog_combat_capacity_logo_ctn"}/>
-
+                        <div className={"dialog_combat_capacity_logo_ctn dialog_combat_strength"}/>
                         <div className={"dialog_combat_capacity_name_ctn"}>
                             Colère divine
                             {/*{capacities[0].name}*/}
@@ -42,7 +41,7 @@ function DialogCombat (props, capacities) {
 
                     </div>
                     <div className={"dialog_combat_capacity_ctn"}>
-                        <div className={"dialog_combat_capacity_logo_ctn"}/>
+                        <div className={"dialog_combat_capacity_logo_ctn dialog_combat_strength"}/>
                         <div className={"dialog_combat_capacity_name_ctn"}>
                             Colère divine
                             {/*{capacities[0].name}*/}
@@ -67,7 +66,7 @@ function DialogCombat (props, capacities) {
                         </div>
                     </div>
                     <div className={"dialog_combat_capacity_ctn"}>
-                        <div className={"dialog_combat_capacity_logo_ctn"}/>
+                        <div className={"dialog_combat_capacity_logo_ctn dialog_combat_protection"}/>
                         <div className={"dialog_combat_capacity_name_ctn"}>
                             Colère divine
                             {/*{capacities[0].name}*/}
@@ -92,13 +91,12 @@ function DialogCombat (props, capacities) {
                         </div>
                     </div>
                     <div className={"dialog_combat_capacity_ctn"}>
-                        <div className={"dialog_combat_capacity_logo_ctn"}/>
+                        <div className={"dialog_combat_capacity_logo_ctn dialog_combat_buff"}/>
                         <div className={"dialog_combat_capacity_name_ctn"}>
                             Colère divine
                             {/*{capacities[0].name}*/}
                         </div>
                         <div className={"dialog_combat_capacity_stats_ctn"}>
-
                             <div className={"dialog_combat_capacity_stats"}>
                                 <span>Dégats</span>: 50
                             </div>
