@@ -12,7 +12,7 @@ const UserCreation = ({ token, user, classe }) => {
   //   const setCurrentPlayer = useStore((state) => state.setCurrentPlayer);
   const { setCurrentPlayer } = useStore(selector);
 
-  console.log(token)
+  console.log(token);
   const createPlayer = async (player) => {
     await instance(token)
       .post("/user_creation", {
@@ -28,7 +28,7 @@ const UserCreation = ({ token, user, classe }) => {
           });
       });
 
-    // window.location.replace("http://127.0.0.1:3000/game_start");
+    window.location.replace("http://127.0.0.1:3000/game_start");
   };
   const updatePlayer = (player) => {
     instance(token).put(`/user_creation/${player.id}`, {
